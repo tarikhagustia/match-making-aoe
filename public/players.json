@@ -1,0 +1,137 @@
+[
+  {
+    "No": "1",
+    "name": "Kickass",
+    "elo": 4.5
+  },
+  {
+    "No": "2",
+    "name": "Ussop",
+    "elo": 4.5
+  },
+  {
+    "No": 3,
+    "name": "Bagas",
+    "elo": 4.25
+  },
+  {
+    "No": 4,
+    "name": "Yans",
+    "elo": 4.25
+  },
+  {
+    "No": "5",
+    "name": "VGB",
+    "elo": 4
+  },
+  {
+    "No": "6",
+    "name": "Apple",
+    "elo": 3.75
+  },
+  {
+    "No": "7",
+    "name": "Wower",
+    "elo": 3.5
+  },
+  {
+    "No": "8",
+    "name": "Syu",
+    "elo": 3.5
+  },
+  {
+    "No": "9",
+    "name": "PC",
+    "elo": 3.5
+  },
+  {
+    "No": "10",
+    "name": "Nukasep",
+    "elo": 3.35
+  },
+  {
+    "No": "11",
+    "name": "Godeg",
+    "elo": 3.25
+  },
+  {
+    "No": "12",
+    "name": "Pev",
+    "elo": 3.25
+  },
+  {
+    "No": "13",
+    "name": "Hakuna",
+    "elo": 3.25
+  },
+  {
+    "No": "14",
+    "name": "Mbok ijah",
+    "elo": 3.25
+  },
+  {
+    "No": "15",
+    "name": "Panglima",
+    "elo": 3
+  },
+  {
+    "No": "16",
+    "name": "Serpen",
+    "elo": 3
+  },
+  {
+    "No": "17",
+    "name": "Paimo",
+    "elo": 3
+  },
+  {
+    "No": "18",
+    "name": "Zhombie",
+    "elo": 3
+  },
+  {
+    "No": "19",
+    "name": "Muzay",
+    "elo": 2.75
+  },
+  {
+    "No": "20",
+    "name": "Lelembut",
+    "elo": 2.75
+  },
+  {
+    "No": "21",
+    "name": "Darindad",
+    "elo": 2.75
+  },
+  {
+    "No": "22",
+    "name": "Abacaba",
+    "elo": 2.5
+  },
+  {
+    "No": "23",
+    "name": "Rasiper",
+    "elo": 2.5
+  },
+  {
+    "No": "24",
+    "name": "Hantara",
+    "elo": 2
+  },
+  {
+    "No": "25",
+    "name": "Funday",
+    "elo": 1.5
+  },
+  {
+    "No": "26",
+    "name": "Putih",
+    "elo": 1.25
+  },
+  {
+    "No": "27",
+    "name": "Muniqe",
+    "elo": 1
+  }
+]
