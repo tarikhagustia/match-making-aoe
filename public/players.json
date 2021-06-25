@@ -67,12 +67,12 @@
   {
     "No": "14",
     "name": "Mbok ijah",
-    "elo": 3.50
+    "elo": 4.0
   },
   {
     "No": "15",
     "name": "Panglima",
-    "elo": 3
+    "elo": 3.5
   },
   {
     "No": "16",
@@ -133,5 +133,12 @@
     "No": "27",
     "name": "Muniqe",
     "elo": 1
-  }
+  },
+   {
+    "No": "28",
+    "name": "Abay Jampang",
+    "elo": 3.25
+  },
+  
+  
 ]
