@@ -122,7 +122,7 @@
   {
     "No": "25",
     "name": "Funday",
-    "elo": 1.5
+    "elo": 2.5
   },
   {
     "No": "26",
@@ -134,9 +134,19 @@
     "name": "Muniqe",
     "elo": 1
   },
-   {
+  {
     "No": "28",
     "name": "Abay Jampang",
     "elo": 3.25
+  },
+  {
+    "No": "29",
+    "name": "Mochpratama",
+    "elo": 3.25
+  },
+  {
+    "No": "30",
+    "name": "Botakmeringgis",
+    "elo": 3
   }
 ]
