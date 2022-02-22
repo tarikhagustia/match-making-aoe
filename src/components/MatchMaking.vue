@@ -1,44 +1,65 @@
 <template>
-  <div class="container">
-    <h1>AOE 2 DE Match Making - Indonesia Players</h1>
-    <form>
-      <label>Players</label>
-      <select class="form-control" v-model="players" multiple style="    min-height: 400px;">
-        <option :value="item" v-for="(item, k) in items" :key="k">
-          {{ item.name }}
-        </option>
-      </select>
-      <button
-        type="button"
-        class="btn btn-primary mt-2"
-        @click.prevent="buildTeamButtonPressed"
-      >
-        Build Team
-      </button>
-    </form>
-
-    <div class="row mt-3" v-if="teams.a.length > 0">
-      <div class="col-sm-6">
-        <h3>Team A</h3>
-        <ol>
-          <li v-for="(p, k) in teams.a" :key="k">{{ p.name }} - {{ p.elo }}</li>
-        </ol>
-        <p>Total Elo {{ countElo(teams.a) }}</p>
+  <div class="mb-5">
+    <div class="header-bg row align-items-center text-center text-gold">
+      <div>
+        <h1 class="text-sm">Age Of Empires Indonesia</h1>
+        <p class="text-sm">Match Making</p>
       </div>
+    </div>
+   
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-sm-4">
+          
+        </div>
+      </div>
+      <form v-if="teams.a.length == 0">
+        <label class="text-gold">Select Player</label>
+        <select
+          class="form-control"
+          v-model="players"
+          multiple
+          style="min-height: 400px"
+        >
+          <option :value="item" v-for="(item, k) in items" :key="k">
+            {{ item.name }} - {{ item.elo }}
+          </option>
+        </select>
+        <button
+          type="button"
+          class="btn btn-primary mt-2"
+          @click.prevent="buildTeamButtonPressed"
+        >
+          Build Team
+        </button>
+      </form>
 
-      <div class="col-sm-6">
-        <h3>Team B</h3>
-        <ol>
-          <li v-for="(p, k) in teams.b" :key="k">{{ p.name }} - {{ p.elo }}</li>
-        </ol>
+      <div class="row mt-3 text-gold" v-if="teams.a.length > 0">
+        <a href="#" @click.prevent="resetTeam">Reset</a>
+        <div class="col-sm-6">
+          <h3>Team A</h3>          
+            <div v-for="(p, k) in teams.a" :key="k">
+              <player :name="p.name" :elo="p.elo"></player>
+            </div>
+          <p>Total Elo {{ countElo(teams.a) }}</p>
+        </div>
 
-         <p>Total Elo {{ countElo(teams.b) }}</p>
+        <div class="col-sm-6">
+          <h3>Team B</h3>
+          <div v-for="(p, k) in teams.b" :key="k">
+              <player :name="p.name" :elo="p.elo"></player>
+            </div>
+
+          <p>Total Elo {{ countElo(teams.b) }}</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Player from "./Player.vue";
+
 function dynamicSort(property) {
   var sortOrder = 1;
   if (property[0] === "-") {
@@ -56,29 +77,34 @@ function dynamicSort(property) {
 }
 
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
+  components: {Player},
   data() {
     return {
       players: [],
       items: [],
       teams: {
         a: [],
-        b: []
-      }
-    }
+        b: [],
+      },
+    };
   },
   mounted() {
     // Fetch data
     fetch("/players.json")
-      .then(response => response.json())
-      .then(data => this.items = data);
+      .then((response) => response.json())
+      .then((data) => (this.items = data));
   },
   methods: {
-    buildTeamButtonPressed() {
-
+    resetTeam() {
       // Clear Teams
-      this.teams.a = []
-      this.teams.b = []
+      this.teams.a = [];
+      this.teams.b = [];
+    },
+    buildTeamButtonPressed() {
+      // Clear Teams
+      this.teams.a = [];
+      this.teams.b = [];
 
       // Randomize
       this.players = this.players.sort(() => Math.random() - 0.5);
@@ -110,9 +136,8 @@ export default {
         sum += team[i].elo;
       }
 
-      return sum
-    }
-
-  }
-}
+      return sum;
+    },
+  },
+};
 </script>
