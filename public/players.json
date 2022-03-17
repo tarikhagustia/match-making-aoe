@@ -2,72 +2,72 @@
   {
     "No": "1",
     "name": "Kickass",
-    "elo": 4.5
+    "elo": 5
   },
   {
     "No": "2",
-    "name": "Ussop",
-    "elo": 4.5
+    "name": "Khaleed",
+    "elo": 5
   },
   {
     "No": 3,
     "name": "Bagas",
-    "elo": 4.25
+    "elo": 5
   },
   {
     "No": 4,
     "name": "Yans",
-    "elo": 4.25
+    "elo": 5
   },
   {
     "No": "5",
     "name": "VGB",
-    "elo": 4
+    "elo": 4.5
   },
   {
     "No": "6",
     "name": "Apple",
-    "elo": 3.75
+    "elo": 4.5
   },
   {
     "No": "7",
     "name": "Wower",
-    "elo": 3.5
+    "elo": 4
   },
   {
     "No": "8",
     "name": "Syu",
-    "elo": 3.75
+    "elo": 4.5
   },
   {
     "No": "9",
-    "name": "PC",
-    "elo": 3.5
+    "name": "Putri Cantik",
+    "elo": 4
   },
   {
     "No": "10",
     "name": "Nukasep",
-    "elo": 3.50
+    "elo": 3.5
   },
   {
     "No": "11",
     "name": "Godeg",
-    "elo": 3.50
+    "elo": 3.5
   },
   {
     "No": "12",
     "name": "Pev",
-    "elo": 3.25
+    "elo": 3.5
   },
   {
     "No": "13",
     "name": "Hakuna",
-    "elo": 3.25
+    "elo": 3.5
   },
   {
     "No": "14",
-    "name": "Mbok ijah",
-    "elo": 4.0
+    "name": "Mbok ijjah",
+    "elo": 4
   },
   {
     "No": "15",
@@ -76,8 +76,8 @@
   },
   {
     "No": "16",
-    "name": "Serpen",
-    "elo": 3
+    "name": "Serpenzos",
+    "elo": 3.5
   },
   {
     "No": "17",
@@ -87,17 +87,17 @@
   {
     "No": "18",
     "name": "Zhombie",
-    "elo": 3.25
+    "elo": 4
   },
   {
     "No": "19",
     "name": "Muzay",
-    "elo": 3
+    "elo": 4
   },
   {
     "No": "20",
     "name": "Lelembut",
-    "elo": 2.75
+    "elo": 2.5
   },
   {
     "No": "21",
@@ -112,12 +112,12 @@
   {
     "No": "23",
     "name": "Rasiper",
-    "elo": 2.5
+    "elo": 2
   },
   {
     "No": "24",
     "name": "Hantara",
-    "elo": 2.50
+    "elo": 3
   },
   {
     "No": "25",
@@ -137,16 +137,256 @@
   {
     "No": "28",
     "name": "Abay Jampang",
-    "elo": 3.25
+    "elo": 4.5
   },
   {
     "No": "29",
-    "name": "Mochpratama",
-    "elo": 2.25
+    "name": "Mochpratama (MRP)",
+    "elo": 3.5
   },
   {
     "No": "30",
     "name": "Botakmeringgis",
+    "elo": 3.5
+  },
+  {
+    "No": "31",
+    "name": "Bentang",
+    "elo": 5
+  },
+  {
+    "No": "31",
+    "name": "Shirayuki",
+    "elo": 5
+  },
+  {
+    "No": "32",
+    "name": "Energic Duck",
+    "elo": 3.5
+  },
+  {
+    "No": "33",
+    "name": "Pecel_Lele",
+    "elo": 4.5
+  },
+  {
+    "No": "34",
+    "name": "Kuurenay",
+    "elo": 4.5
+  },
+  {
+    "No": "35",
+    "name": "Holbek",
+    "elo": 4
+  },
+  {
+    "No": "36",
+    "name": "Kaipang",
+    "elo": 4
+  },
+  {
+    "No": "37",
+    "name": "Valynne",
+    "elo": 4
+  },
+  {
+    "No": "38",
+    "name": "Cheese",
+    "elo": 4.5
+  },
+  {
+    "No": "39",
+    "name": "Gatot Kaca",
+    "elo": 5
+  },
+  {
+    "No": "40",
+    "name": "Aruba",
     "elo": 3
+  },
+  {
+    "No": "41",
+    "name": "Diks",
+    "elo": 3
+  },
+  {
+    "No": "42",
+    "name": "Dape",
+    "elo": 3
+  },
+  {
+    "No": "43",
+    "name": "Darrydad",
+    "elo": 3
+  },
+  {
+    "No": "44",
+    "name": "Ivan Charlegmane",
+    "elo": 3
+  },
+  {
+    "No": "45",
+    "name": "Putih",
+    "elo": 3
+  },
+  {
+    "No": "46",
+    "name": "Little Breaker",
+    "elo": 3
+  },
+  {
+    "No": "47",
+    "name": "KelvinLiyu",
+    "elo": 3
+  },
+  {
+    "No": "48",
+    "name": "Nep",
+    "elo": 3
+  },
+  {
+    "No": "49",
+    "name": "Capybara",
+    "elo": 3
+  },
+  {
+    "No": "50",
+    "name": "El Darso",
+    "elo": 2.5
+  },
+  {
+    "No": "51",
+    "name": "Dundee",
+    "elo": 2.5
+  },
+  {
+    "No": "52",
+    "name": "Maruting",
+    "elo": 2.5
+  },
+  {
+    "No": "53",
+    "name": "Swarthoid",
+    "elo": 2.5
+  },
+  {
+    "No": "54",
+    "name": "Hans",
+    "elo": 2.5
+  },
+  {
+    "No": "55",
+    "name": "Kang U Ki",
+    "elo": 2.5
+  },
+  {
+    "No": "56",
+    "name": "Fundaybox",
+    "elo": 2.5
+  },
+  {
+    "No": "57",
+    "name": "Biasa Aja",
+    "elo": 2
+  },
+  {
+    "No": "58",
+    "name": "JustRyan",
+    "elo": 2
+  },
+  {
+    "No": "59",
+    "name": "Satanic",
+    "elo": 2
+  },
+  {
+    "No": "60",
+    "name": "Ganti ID",
+    "elo": 2
+  },
+  {
+    "No": "61",
+    "name": "DewaDull",
+    "elo": 2
+  },
+  {
+    "No": "62",
+    "name": "Aiksenn",
+    "elo": 2
+  },
+  {
+    "No": "63",
+    "name": "Dewampok",
+    "elo": 2
+  },
+  {
+    "No": "64",
+    "name": "Terareina",
+    "elo": 2
+  },
+  {
+    "No": "65",
+    "name": "Hirabunnie",
+    "elo": 2
+  },
+  {
+    "No": "66",
+    "name": "Kirsune",
+    "elo": 2
+  },
+  {
+    "No": "67",
+    "name": "Wkwkwkw",
+    "elo": 2
+  },
+  {
+    "No": "68",
+    "name": "BGST",
+    "elo": 2
+  },
+  {
+    "No": "69",
+    "name": "Apex",
+    "elo": 1.5
+  },
+  {
+    "No": "70",
+    "name": "Indogegewepe",
+    "elo": 1.5
+  },
+  {
+    "No": "71",
+    "name": "BaliDwipa",
+    "elo": 1.5
+  },
+  {
+    "No": "72",
+    "name": "Reizaharist",
+    "elo": 1.5
+  },
+  {
+    "No": "73",
+    "name": "Bewokin",
+    "elo": 1.5
+  },
+  {
+    "No": "74",
+    "name": "Phytagoras",
+    "elo": 1.5
+  },
+  {
+    "No": "75",
+    "name": "Kingslayer",
+    "elo": 1.5
+  },
+  {
+    "No": "76",
+    "name": "Ilhami",
+    "elo": 1.5
+  },
+  {
+    "No": "77",
+    "name": "Bowee",
+    "elo": 1.5
   }
 ]
