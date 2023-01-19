@@ -1,64 +1,81 @@
 <template>
-  <div class="d-flex card rounded mb-3 text-gold" v-bind:class="{ 'glow-border': (elo >= 4.5) }">
-      <div class=""><img width="70" :src="profile" :alt="name"></div>
-      <div class="mx-2">
-          <p class="m-0 name">{{ name }}</p>
-          <p class="m-0 text-xs">Elo {{ elo }}</p>
-      </div>
-  </div>
+    <div @click="onPlayerSelected" class="d-flex pointer card rounded mb-3 text-gold" :class="{ 'glow-border': (inMatch) }">
+        <div class=""><img width="70" :src="profile" :alt="player.name"></div>
+        <div class="mx-2">
+            <p class="m-0 name">{{ player.name }}</p>
+            <p class="m-0 text-xs">Elo {{ player.rating }}</p>
+        </div>
+    </div>
 </template>
 <style scoped>
 .name {
     font-size: 1.2rem;
 }
+.pointer {cursor: pointer;}
 </style>
 <script>
 
 
 export default {
-  name: "HelloWorld",
-  props: ['name', 'elo'],
-  data() {
-    return {
-      
-    };
-  },
-  mounted() {
-   
-  },
-  computed: {
-      profile() {
-          if (this.elo >= 5) {
-              return "https://static.wikia.nocookie.net/ageofempires/images/2/28/Paladin_aoe2DE.png";
-          }
+    name: "HelloWorld",
+    props: {
+        player: {
+            type: Object
+        },
+        inMatch : {
+            type: Boolean,
+            default: false
+        }
+    },
+    data() {
+        return {
+            selected: false
+        };
+    },
+    mounted() {
 
-          if(this.elo >= 4.5) {
-              return "https://static.wikia.nocookie.net/ageofempires/images/5/54/Champion_aoe2DE.png";
-          }
+    },
+    computed: {
+        profile() {
+            if (this.player.rating >= 1400) {
+                return "https://static.wikia.nocookie.net/ageofempires/images/2/28/Paladin_aoe2DE.png";
+            }
 
-          if(this.elo >= 4) {
-              return "https://static.wikia.nocookie.net/ageofempires/images/1/10/Cavalier_aoe2DE.png";
-          }
+            if (this.player.rating >= 1300) {
+                return "https://static.wikia.nocookie.net/ageofempires/images/5/54/Champion_aoe2DE.png";
+            }
 
-          if(this.elo >= 3.5) {
-              return "https://static.wikia.nocookie.net/ageofempires/images/3/3c/Twohanded_aoe2DE.png";
-          }
+            if (this.player.rating >= 1200) {
+                return "https://static.wikia.nocookie.net/ageofempires/images/1/10/Cavalier_aoe2DE.png";
+            }
 
-          if(this.elo >= 3) {
-              return "https://static.wikia.nocookie.net/ageofempires/images/a/aa/Halberdier_aoe2DE.png";
-          }
+            if (this.player.rating >= 1100) {
+                return "https://static.wikia.nocookie.net/ageofempires/images/3/3c/Twohanded_aoe2DE.png";
+            }
 
-          if(this.elo >= 2.5) {
-              return "https://static.wikia.nocookie.net/ageofempires/images/a/a6/Aoe2-infantry-2-pikeman.png";
-          }
+            if (this.player.rating >= 1000) {
+                return "https://static.wikia.nocookie.net/ageofempires/images/a/aa/Halberdier_aoe2DE.png";
+            }
 
-          if(this.elo >= 2) {
-              return "https://static.wikia.nocookie.net/ageofempires/images/9/96/Manatarms_aoe2DE.png";
-          }
+            if (this.player.rating >= 900) {
+                return "https://static.wikia.nocookie.net/ageofempires/images/a/a6/Aoe2-infantry-2-pikeman.png";
+            }
 
-          return "https://static.wikia.nocookie.net/ageofempires/images/6/68/MaleVillDE.jpg";
-          
-      }
-  }
+            if (this.player.rating >= 800) {
+                return "https://static.wikia.nocookie.net/ageofempires/images/9/96/Manatarms_aoe2DE.png";
+            }
+
+            return "https://static.wikia.nocookie.net/ageofempires/images/6/68/MaleVillDE.jpg";
+
+        }
+    },
+    methods: {
+        onPlayerSelected() {
+            if (!this.selected) {
+                this.selected = true;
+                this.$emit('player-selected', this.player)
+            }
+        }
+    }
 };
 </script>
