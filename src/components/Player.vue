@@ -1,6 +1,7 @@
 <template>
-    <div @click="onPlayerSelected" class="d-flex pointer card rounded mb-3 text-gold" :class="{ 'glow-border': (inMatch) }">
-        <div class=""><img width="70" :src="profile" :alt="player.name"></div>
+    <div @click="onPlayerSelected" class="d-flex pointer card rounded mb-3 text-gold"
+        :class="{ 'glow-border': (inMatch) }">
+        <div class=""><img width="70" :src="avatar" :alt="player.name"></div>
         <div class="mx-2">
             <p class="m-0 name">{{ player.name }}</p>
             <p class="m-0 text-xs">Elo {{ player.rating }}</p>
@@ -11,7 +12,10 @@
 .name {
     font-size: 1.2rem;
 }
-.pointer {cursor: pointer;}
+
+.pointer {
+    cursor: pointer;
+}
 </style>
 <script>
 
@@ -22,18 +26,19 @@ export default {
         player: {
             type: Object
         },
-        inMatch : {
+        inMatch: {
             type: Boolean,
             default: false
         }
     },
     data() {
         return {
-            selected: false
+            selected: false,
+            avatar: null
         };
     },
     mounted() {
-
+        this.fetchProfile()
     },
     computed: {
         profile() {
@@ -75,6 +80,22 @@ export default {
                 this.selected = true;
                 this.$emit('player-selected', this.player)
             }
+        },
+        fetchProfile() {
+            fetch('https://api.ageofempires.com/api/v2/AgeII/GetMPFull', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: JSON.stringify({
+                    profileId: this.player.profile_id
+                })
+            })
+                .then(response => response.json())
+                .then(json => {
+                    this.avatar = json.user.avatarUrl;
+                });
         }
     }
 };
