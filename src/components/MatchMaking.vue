@@ -21,7 +21,14 @@
           </div>
       </div>
       <form v-if="teams.a.length == 0" @submit.prevent="findPlayer">
-        <label class="text-gold">Select Player</label>
+        <div class="d-flex justify-content-between mb-2">
+          <label class="text-gold d-block">Select Player</label>
+          <select v-model="country" class="d-block">
+            <option value="ID">Indonesia</option>
+            <option value="SG">Singapore</option>
+            <option value="">Semua</option>
+          </select>
+        </div>
         <div>
           <div class="input-group mb-3">
             <input v-model="filter" type="text" class="form-control" placeholder="Type player name here"
@@ -97,6 +104,7 @@ export default {
         a: [],
         b: [],
       },
+      country: 'ID',
       audio: null
     };
   },
@@ -110,7 +118,7 @@ export default {
       this.selectedPlayers.push(player);
     },
     findPlayer() {
-      fetch(`https://legacy.aoe2companion.com/api/leaderboard?game=aoe2de&leaderboard_id=4&start=1&count=50&country=ID&search=${this.filter}`)
+      fetch(`https://legacy.aoe2companion.com/api/leaderboard?game=aoe2de&leaderboard_id=0&start=1&count=50&country=${this.country}&search=${this.filter}`)
         .then((response) => response.json())
         .then((data) => this.players = data.leaderboard);
     },
